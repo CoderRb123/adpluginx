@@ -8,8 +8,6 @@ import 'package:provider/provider.dart';
 // 🌎 Project imports:
 import 'package:adpluginx/AdBase/AppLovin/AppLovinCallerx.dart';
 import 'package:adpluginx/adpluginx.dart';
-import 'package:yodosdk/Init/InitAdCallback.dart';
-import 'package:yodosdk/yodosdk.dart';
 
 class BaseClass {
   static final BaseClass _singleton = BaseClass._internal();
@@ -37,19 +35,6 @@ class BaseClass {
     FacebookCallerX().intFacebook();
     AppLovinCallerx().initAppLovin();
     UnityCallerX().initUnity();
-    if (adBase.data!['adIds']['yodo']['initYodo'] ?? true) {
-      await Yodosdk.initSdk(
-        appId: adBase.data!['adIds']['yodo']['appId'],
-        showPrivacyDialog: true,
-        preLoadAds: true,
-        initAdCallback: InitAdCallback(onSuccess: () {
-          dog.i("Yodo Init Success");
-        }, onError: (p) {
-          dog.i("Yodo Init Failed");
-        }),
-      );
-    }
-
     await IronSource.init(
       appKey: adBase.data!['adIds']['ironSource']['appId'],
       adUnits: [

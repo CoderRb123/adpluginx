@@ -722,19 +722,13 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "yodosdk",
-      "rootUri": "file:///Users/rehanabbasbukhari/.pub-cache/hosted/pub.dev/yodosdk-0.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
       "name": "adpluginx_example",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-25T05:07:53.151289Z",
+  "generated": "2023-05-31T12:17:10.680030Z",
   "generator": "pub",
-  "generatorVersion": "3.0.1"
+  "generatorVersion": "3.0.2"
 }

@@ -16,9 +16,6 @@ import 'package:adpluginx/AdBase/Google/Banner/View/GoogleBannerView.dart';
 import 'package:adpluginx/AdBase/Interfaces/AdCallerInterface.dart';
 import 'package:adpluginx/AdBase/IronSource/IronSourceBannerX.dart';
 import 'package:adpluginx/AdBase/Unity/Banner/View/UnityBannerView.dart';
-import 'package:yodosdk/Banner/BannerAdCallback.dart';
-import 'package:yodosdk/Banner/YodoBannerAd.dart' as yodo;
-import 'package:yodosdk/yodosdk.dart';
 import '../Model/ScreenWiseModel.dart';
 
 class BannerEngine extends HookWidget {
@@ -125,18 +122,6 @@ class BannerEngine extends HookWidget {
           dog.i("Case AppLovin Banner");
           bannerWidget.value =
               const SafeArea(top: false, child: AppLovinBanner());
-          break;
-        case 5:
-          dog.i("Case Yodo Banner");
-          bannerWidget.value = Yodosdk.getBanner(
-              size: yodo.BannerSize.banner,
-              bannerAdCallback: BannerAdCallback(
-                onOpen: () {},
-                onOpenFail: (error) {},
-                onLoad: () {},
-                onClosed: () {},
-                onLoadFailed: (errorMessage) {},
-              ));
           break;
         default:
           bannerWidget.value = const SizedBox(

@@ -14,9 +14,6 @@ import 'package:adpluginx/AdBase/Facebook/Banner/FacebookBanner.dart';
 import 'package:adpluginx/AdBase/Google/Native/View/GoogleNativeView.dart';
 import 'package:adpluginx/AdBase/Interfaces/AdCallerInterface.dart';
 import 'package:adpluginx/Utils/DeviceInformation/PackageInfoX.dart';
-import 'package:yodosdk/Native/NativeAdCallback.dart';
-import 'package:yodosdk/Native/YodoNativeAd.dart';
-import 'package:yodosdk/yodosdk.dart';
 import '../Model/ScreenWiseModel.dart';
 
 class NativeEngine extends HookWidget {
@@ -88,16 +85,6 @@ class NativeEngine extends HookWidget {
         case 2:
           dog.i("Case Applovin Native");
           bannerWidget.value = const AppLovinMREC();
-          break;
-        case 3:
-          dog.i("Case Yodo Native");
-          bannerWidget.value = Yodosdk.getNative(
-              size: NativeSize.nativeLarge,
-              nativeAdCallback: NativeAdCallback(
-                onLoad: () {},
-                onClosed: () {},
-                onLoadFailed: (errorMessage) {},
-              ));
           break;
         default:
           bannerWidget.value = const SizedBox(
