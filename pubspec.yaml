@@ -1,0 +1,76 @@
+name: adpluginx
+description: Ads Management Tool For Flutter
+version: 0.1.7
+homepage: "https://github.com/CoderRb123"
+
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.4
+
+  #ad Plugin
+  google_mobile_ads: ^3.0.0
+  unity_mediation: ^0.1.0
+  facebook_audience_network: ^1.0.1
+  ironsource_mediation: ^1.1.0
+  unity_ads_plugin: ^0.3.8
+  applovin_max: ^2.4.6
+  yodosdk: ^0.0.1
+  #utils
+  package_info_plus: ^3.1.2
+  shared_preferences: ^2.1.0
+  loading_animation_widget: ^1.2.0+4
+  staggered_grid_view_flutter: ^0.0.4
+  onesignal_flutter: ^3.5.1
+  app_tracking_transparency: ^2.0.4
+  url_launcher: ^6.1.10
+  device_info_plus: ^8.2.2
+  font_awesome_flutter: ^10.4.0
+  sign_in_with_apple: ^4.3.0
+  in_app_purchase: ^3.1.5
+  blurrycontainer: ^1.0.2
+  cached_network_image: ^3.2.3
+  in_app_purchase_android: ^0.2.5+4
+  flutter_hooks: ^0.18.6
+  in_app_purchase_storekit: ^0.3.6+3
+  intl: ^0.18.1
+  in_app_review: ^2.0.6
+  slide_countdown: ^0.6.0
+  #LifeCycle
+  flutter_lifecycle_detector: ^0.0.6
+  dart_ping: ^8.0.1
+  dart_ping_ios: ^3.0.0
+
+
+  #NetWorking
+  dio: ^5.1.1
+  ### Arch
+  pmvvm: ^4.0.1
+  provider: ^6.0.5
+  flutter_screenutil: ^5.7.0
+  get: ^4.6.5
+
+  ###LOG
+  dog: ^1.4.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+  import_sorter: ^4.6.0
+
+import_sorter:
+  emojis: true # Optional, defaults to false
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.adpluginx
+        pluginClass: AdpluginxPlugin
+      ios:
+        pluginClass: AdpluginxPlugin
