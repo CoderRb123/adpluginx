@@ -438,27 +438,6 @@ class _InAppPurchaseScreenState extends State<InAppPurchaseScreen> {
   }
 
   Future<void> confirmPriceChange(BuildContext context) async {
-    if (Platform.isAndroid) {
-      final InAppPurchaseAndroidPlatformAddition androidAddition =
-          _inAppPurchase
-              .getPlatformAddition<InAppPurchaseAndroidPlatformAddition>();
-      var priceChangeConfirmationResult =
-          await androidAddition.launchPriceChangeConfirmationFlow(
-        sku: 'purchaseId',
-      );
-      if (priceChangeConfirmationResult.responseCode == BillingResponse.ok) {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text('Price change accepted'),
-        ));
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text(
-            priceChangeConfirmationResult.debugMessage ??
-                "Price change failed with code ${priceChangeConfirmationResult.responseCode}",
-          ),
-        ));
-      }
-    }
     if (Platform.isIOS) {
       var iapStoreKitPlatformAddition = _inAppPurchase
           .getPlatformAddition<InAppPurchaseStoreKitPlatformAddition>();

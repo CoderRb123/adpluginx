@@ -34,7 +34,6 @@ dependencies:
   in_app_purchase: ^3.1.7
   blurrycontainer: ^1.0.2
   cached_network_image: ^3.2.3
-  in_app_purchase_android: ^0.3.0+4
   flutter_hooks: ^0.18.6
   in_app_purchase_storekit: ^0.3.6+4
   intl: ^0.18.1
